@@ -1,0 +1,74 @@
+<!--pages/test_access/test_access.wxml-->
+<view class="ts-page">
+	<view class="page-head">
+		<view class="weui-vcode-btn txt" bindtap="quit">退出</view>
+		<view class="weui-vcode-btn txt" bindtap="orderCourt">预定</view>
+		
+	</view>
+	<view class="list-body">
+		<view class="list-date">
+			<view class="date-item {{selectDateVal == item.index ? 'selected' : ''}}" wx:for="{{dateNav}}" wx:key="weekday" bindtap = "changeSelect" data-val="{{item.index}}">
+				<view class="a">{{item.weekday}}</view>
+				<view class="b">{{item.date}}</view>
+			</view>
+		</view>
+		<view class="list-court-area">
+			<mp-tabs 
+			tabs="{{courtAreaList}}" 
+			activeTab="{{courtAreaVal}}" 
+			swiperClass="weui-tabs-swiper"
+			bindtabclick="onTabClick"
+			bindchange="onChange"
+			activeClass="tab-bar-title__selected"
+			>
+			</mp-tabs>
+		</view>
+		<!-- <view class="list-court-content">
+		
+			<view class="list-row head">
+				<view class="list-col-item t"></view>
+				<view class="list-col-item">C1</view>
+				<view class="list-col-item">C2</view>
+				<view class="list-col-item">C3</view>
+			</view>
+			<view class="list-row opt">
+				<view class="list-col-item t">
+					<view class="time">7:00</view>
+				</view>
+				<view class="list-col-item status avai"></view>
+				<view class="list-col-item status avai"></view>
+				<view class="list-col-item status unavai"></view>
+			</view>
+		</view> -->
+		<view class="list-court-content cols">
+			<view class="list-court-body" hover-class="none" hover-stop-propagation="false">
+				
+				<view class="list-cols-t" hover-class="none" hover-stop-propagation="false">
+					<view class="list-cols time">
+						<view class="list-cols-item"></view>
+						<view class="list-cols-item" wx:for="{{courtTime}}" wx:for-item="v" >
+							<view class="txt">{{v}}</view>
+						</view>
+					</view>
+				</view>
+				<scroll-view class="list-cols-con" scroll-x="true" style="width:{{courtList.length * 120}}rpx">
+					<view class="list-cols court" wx:for="{{courtList}}"  wx:for-item="v" wx:key="parkname">
+						<view class="list-cols-item" >
+							<view class="txt">{{v.parkname}}</view>
+						</view>
+						<view class="list-cols-item"  wx:for="{{v.reserve}}"  wx:for-item="vi" wx:key="key" data-key="{{vi.key}}">
+							<view class="cols-item-block status {{vi.statusClass}} {{selectedCourt[vi.key] ? 'selected' : ''}}" bindtap="selectCourt" data-val="{{vi}}">
+								<mp-icon type="field" icon="done" color="#ffffff" size="20" wx:if="{{vi.statusClass == 'order' || selectedCourt[vi.key]}}"></mp-icon>
+								
+							</view>
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+	</view>
+	
+	<mp-dialog title="{{errorTitle}}" show="{{errorMsg}}" buttons="{{dialogButton}}" bindbuttontap="errorLogClose">
+        <view>{{errorMsg}}</view>
+    </mp-dialog>
+</view>

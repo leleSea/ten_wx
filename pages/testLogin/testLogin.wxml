@@ -1,0 +1,23 @@
+<view class="container test-login">
+	<view class="login-body">
+		<view class="login-item weui-cell weui-cell_input">
+			<input class="weui-input" type="number" placeholder="手机号" bindinput="valueSet" data-type="phone" />
+		</view>
+		<view class="login-item weui-cell weui-cell_input">
+			<input class="weui-input" type="number" placeholder="验证码" bindinput="valueSet" data-type="code" />
+			<button type="primary" size="mini" class="code" bindtap="sendSmsCode">
+				<view wx:if="{{!countShow}}">验证码</view>
+				<view wx:else>{{countShow}}</view>
+			</button>
+		</view>
+		<view class="login-item weui-cell weui-cell_input">
+			<input class="weui-input" type="password" placeholder="密码" bindinput="valueSet" data-type="password" />
+		</view>
+		<view class="login-item weui-cell weui-cell_input">
+			<button type="primary" class="login" bindtap="login">登录</button>
+		</view>
+	</view>
+	<mp-dialog title="{{errorTitle}}" show="{{errorMsg}}" buttons="{{dialogButton}}" bindbuttontap="errorLogClose">
+        <view>{{errorMsg}}</view>
+    </mp-dialog>
+</view>

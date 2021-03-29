@@ -1,0 +1,132 @@
+.ts-page {
+  box-sizing: border-box;
+}
+.ts-page .list-body .list-date {
+  overflow: hidden;
+}
+.ts-page .list-body .list-date .date-item {
+  float: left;
+  width: 25%;
+  padding: 10rpx;
+  border: 1px solid #ddd;
+}
+.ts-page .list-body .list-date .date-item .a,
+.ts-page .list-body .list-date .date-item .b {
+  font-size: 24rpx;
+  text-align: center;
+}
+.ts-page .list-body .list-date .date-item.selected {
+  border-color: #FF9268;
+}
+.ts-page .list-body .list-court-area swiper {
+  display: none;
+}
+.ts-page .list-body .list-court-area .weui-tabs-bar__item {
+  padding: 10rpx 30rpx;
+}
+.ts-page .list-body .list-court-content {
+  padding: 15rpx 0px;
+}
+.ts-page .list-body .list-court-content .list-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item {
+  font-size: 30rpx;
+  width: 12.5%;
+  height: 50rpx;
+  text-align: center;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item.t {
+  width: 10%;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item.t .time {
+  margin-top: -15rpx;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item.status {
+  border-right: 1px solid #fff;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item.unavai {
+  background: #B7BDBF;
+}
+.ts-page .list-body .list-court-content .list-row .list-col-item.avai {
+  background: #2BB061;
+}
+.ts-page .list-body .list-court-content .list-row:nth-child(2) .list-col-item.status {
+  border-top: 1px solid #fff;
+}
+.ts-page .list-body .list-court-content .list-row:last-child .list-col-item.status {
+  border-bottom: 1px solid #fff;
+}
+.ts-page .list-body .list-cols.time {
+  width: 60rpx;
+}
+.ts-page .list-body .list-cols.time .list-cols-item {
+  position: relative;
+}
+.ts-page .list-body .list-cols.time .txt {
+  top: -20rpx;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+.ts-page .list-body .list-cols.court {
+  width: 120rpx;
+}
+.ts-page .list-body .list-cols.court .list-cols-item .cols-item-block.status {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ts-page .list-body .list-cols.court .list-cols-item .cols-item-block.status.avai {
+  background: #2BB061;
+}
+.ts-page .list-body .list-cols.court .list-cols-item .cols-item-block.status.unavai {
+  background: #B7BDBF;
+}
+.ts-page .list-body .list-cols.court .list-cols-item .cols-item-block.order {
+  background: #F9C325;
+}
+.ts-page .list-body .list-cols.court .list-cols-item .cols-item-block.status.selected {
+  background: #FF832D;
+}
+.ts-page .list-body .list-court-content.cols {
+  display: flex;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body {
+  position: relative;
+  padding-left: 60rpx;
+  width: 100%;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body .list-cols-t {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body .list-cols-con {
+  white-space: nowrap;
+  width: 100%;
+  height: 839rpx;
+  display: flex;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body .list-cols {
+  float: left;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body .list-cols .list-cols-item {
+  height: 50rpx;
+  text-align: center;
+}
+.ts-page .list-body .list-court-content.cols .list-court-body .list-cols .list-cols-item .txt {
+  font-size: 30rpx;
+}
+.ts-page .page-head .txt {
+  font-size: 30rpx;
+  text-align: right;
+  height: auto;
+  line-height: normal;
+}

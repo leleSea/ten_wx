@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+		"mp-msg": "weui-miniprogram/msg/msg",
+		"mp-dialog": "weui-miniprogram/dialog/dialog"
+	}
+}

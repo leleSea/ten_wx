@@ -1,0 +1,155 @@
+.ts-page{
+    box-sizing: border-box;
+    .list-body{
+        .list-date{
+            overflow: hidden;
+            .date-item{
+                float: left;
+                width: 25%;
+                padding: 10rpx;
+                border: 1px solid #ddd;
+                .a, .b{
+                    font-size: 24rpx;
+                    text-align: center;
+                }
+            }
+            .date-item.selected{
+                border-color: #FF9268;
+            }
+        }
+        .list-court-area{
+            swiper{
+                display: none;
+            }
+            .weui-tabs-bar__item{
+                padding: 10rpx 30rpx;
+            }
+        }
+        .list-court-content{
+            padding: 15rpx 0px;
+            .list-row{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                .list-col-item{
+                    font-size: 30rpx;
+                    width: 12.5%;
+                    height: 50rpx;
+                    text-align: center;
+                }
+                .list-col-item.t{
+                    width: 10%;
+                    .time{
+                        margin-top: -15rpx;
+                    }
+                }
+                .list-col-item.status{
+                    border-right: 1px solid #fff;
+                }
+                .list-col-item.unavai{
+                    background: #B7BDBF;
+                }
+                .list-col-item.avai{
+                    background: #2BB061;
+                }
+            }
+            .list-row:nth-child(2){
+                .list-col-item.status{
+                    border-top: 1px solid #fff;
+                }
+            }
+            .list-row:last-child{
+                .list-col-item.status{
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            
+        }
+        .list-cols.time{
+            width: 60rpx;
+            .list-cols-item{
+                position: relative;
+            }
+            .txt{
+                top: -20rpx;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+            }
+        }
+        .list-cols.court{
+            width: 120rpx;
+            .list-cols-item:nth-child(2){
+                .cols-item-block.status{
+                    
+                }
+            }
+            .list-cols-item{
+                .cols-item-block.status{
+                    width: 100%;
+                    height: 100%;
+                    border-right: 1px solid #fff;
+                    border-top: 1px solid #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .cols-item-block.status.avai{
+                    background: #2BB061;
+                }
+                .cols-item-block.status.unavai{
+                    background: #B7BDBF;
+                }
+                // .cols-item-block.order::before{
+                //     content: '';
+                //     background: url()
+                // }
+                .cols-item-block.order{
+                    background: #F9C325;
+                }
+                .cols-item-block.status.selected{
+                    background: #FF832D;
+                }
+            }
+            
+        }
+        .list-court-content.cols{
+            display: flex;
+            .list-court-body{
+                position: relative;
+                padding-left: 60rpx;
+                width: 100%;
+                .list-cols-t{
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+                .list-cols-con{
+                    white-space: nowrap;
+                    width: 100%;
+                    height: 839rpx;
+                    display: flex;
+                }
+                .list-cols{
+                    float: left;
+                    .list-cols-item{
+                        height: 50rpx;
+                        text-align: center;
+                        .txt{
+                            font-size: 30rpx;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .page-head{
+        .txt{
+            font-size: 30rpx;
+            text-align: right;
+            height: auto;
+            line-height: normal;
+        }
+    }
+}
